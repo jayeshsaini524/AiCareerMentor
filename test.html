@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AI Career Mentor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="other.css">
     <style>
         /* Base styles remain the same... */
 
@@ -14,40 +14,9 @@
 </head>
 <body>
     <div id="app">
-        <!-- Previous screens (splash, login, home) remain the same... -->
-       
-        
-        <!-- Home Screen -->
-        <div class="screen hidden" id="homeScreen">
-            <div class="home-header">
-                <h2>Home</h2>
-                <div class="user-info">
-                    <span>Jayesh saini</span>
-                    <div class="user-avatar">👤</div>
-                </div>
-            </div>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <i>🔍</i>
-                    <p>Find career</p>
-                </div>
-                <div class="menu-item">
-                    <i>📚</i>
-                    <p>Resources</p>
-                </div>
-                <div class="menu-item">
-                    <i>📊</i>
-                    <p>Compare Jobs</p>
-                </div>
-                <div class="menu-item">
-                    <i>🏢</i>
-                    <p>Companies</p>
-                </div>
-            </div>
-        </div>
         <!-- Career Fields Screen (previously created) -->
-        <div class="screen hidden" id="careerFieldsScreen">
-            <div class="career-header">
+        <div class="screen">
+            <div class="career-header" id="careerFieldsScreen">
                 <div style="display: flex; align-items: center;">
                     <button class="back-btn" onclick="showHomeScreen('careerFieldsScreen')">←</button>
                     <h2>Choose Field of Interest</h2>
@@ -61,11 +30,18 @@
             <div class="search-bar">
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Choose Field of Interest">
-                    <button class="ask-ai-btn">Ask AI</button>
+                    <button class="ask-ai-btn" onclick="showbot()" id="botToggle">Ask AI</button>
                 </div>
+             
             </div>
 
-            <div class="fields-grid">
+            <section class="botbox">
+                <iframe id="ibot" style="opacity: 0;"
+                src="https://www.chatbase.co/chatbot-iframe/JyN5qHcQcXYc98Ml2mhK5"
+                frameborder="0"
+            ></iframe>
+            </section>
+            <div class="fields-grid menu-grid">
                 <div class="field-item">Technology</div>
                 <div class="field-item">Healthcare</div>
                 <div class="field-item">Arts</div>
@@ -78,118 +54,8 @@
         </div>
 
         <!-- Resources Screen -->
-        <div class="screen hidden" id="resourcesScreen">
-            <div class="career-header">
-                <div class="header-left">
-                    <button class="back-btn" onclick="showHomeScreen('resourcesScreen')">←</button>
-                    <h2>Resources</h2>
-                </div>
-                <div class="user-info">
-                    <span>Jayesh saini</span>
-                    <div class="user-avatar">👤</div>
-                </div>
-            </div>
 
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h3>Career Guides</h3>
-                    <p>Comprehensive guides for different career paths</p>
-                </div>
-                <div class="resource-card">
-                    <h3>Interview Prep</h3>
-                    <p>Tips and tricks for successful interviews</p>
-                </div>
-                <div class="resource-card">
-                    <h3>Resume Builder</h3>
-                    <p>Create and optimize your professional resume</p>
-                </div>
-                <div class="resource-card">
-                    <h3>Skill Assessments</h3>
-                    <p>Test your skills and get recommendations</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Compare Jobs Screen -->
-        <div class="screen hidden" id="compareJobsScreen">
-            <div class="career-header">
-                <div class="header-left">
-                    <button class="back-btn" onclick="showHomeScreen('compareJobsScreen')">←</button>
-                    <h2>Compare Jobs</h2>
-                </div>
-                <div class="user-info">
-                    <span>Jayesh saini</span>
-                    <div class="user-avatar">👤</div>
-                </div>
-            </div>
-
-            <div class="search-bar">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search jobs to compare...">
-                </div>
-            </div>
-
-            <div class="comparison-container">
-                <div class="job-comparison">
-                    <div class="job-card">
-                        <h3>Software Engineer</h3>
-                        <p>Avg. Salary: $95,000</p>
-                        <p>Growth Rate: 22%</p>
-                        <p>Required Education: Bachelor's</p>
-                    </div>
-                    <div class="job-card">
-                        <h3>Data Scientist</h3>
-                        <p>Avg. Salary: $113,000</p>
-                        <p>Growth Rate: 28%</p>
-                        <p>Required Education: Master's</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Companies Screen -->
-        <div class="screen hidden" id="companiesScreen">
-            <div class="career-header">
-                <div class="header-left">
-                    <button class="back-btn" onclick="showHomeScreen('companiesScreen')">←</button>
-                    <h2>Companies</h2>
-                </div>
-                <div class="user-info">
-                    <span>Jayesh saini</span>
-                    <div class="user-avatar">👤</div>
-                </div>
-            </div>
-
-            <div class="search-bar">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search companies...">
-                </div>
-            </div>
-
-            <div class="companies-list">
-                <div class="company-card">
-                    <div class="company-logo">🏢</div>
-                    <div class="company-info">
-                        <h3>Google</h3>
-                        <p>Technology • 150,000+ employees</p>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">🏢</div>
-                    <div class="company-info">
-                        <h3>Microsoft</h3>
-                        <p>Technology • 180,000+ employees</p>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-logo">🏢</div>
-                    <div class="company-info">
-                        <h3>Apple</h3>
-                        <p>Technology • 147,000+ employees</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+    <script src="bot.js"></script>
 </body>
 </html>
