@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #2c3e50;
-    --gradient-start: #f8d7d7;
-    --gradient-end: #e8e3e7;
+    --primary-color: #00ddeb;
+    --gradient-start: #8c00ff;
+    --gradient-end:#5b42f3;
 }
 
 * {
