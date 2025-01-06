@@ -33,8 +33,8 @@ function showbot() {
           // Show the botbox
           botbox.style.display = "flex";
           botbox.style.width = "96%";
-          botbox.style.height = '50vh';
-          botbox.style.maxHeight='350px';
+          botbox.style.height = '70vh';
+          botbox.style.maxHeight='450px';
           botbox.style.position = "relative";
           setTimeout(function() {
           ibot.style.opacity = "1";

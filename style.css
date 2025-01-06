@@ -604,12 +604,12 @@ body, html {
 
 @keyframes collapsed{
     from{
-      max-height: 350px;
+      max-height: 450px;
     }
    to{
-      max-height: 5px;
-      width: 40px;
-      height: 40px;      
+      max-height: 1px;
+      width: 1px;
+      height: 1px;      
     }
   }
   .botbox.collapsed {
