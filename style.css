@@ -51,15 +51,39 @@ body, html {
 /* Splash Screen */
 #splashScreen {
     background: white;
-    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem; /* Add padding for some spacing */
+    position: relative; /* Enable absolute positioning for child elements */
 }
 
 .logo-box {
-    padding: 2rem;
+    text-align: center;
+    padding: 1rem;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Ensure it stays above the background */
+}
+
+.logo-box h1 {
+    font-size: 2rem; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+.image-box {
+    position: absolute; /* Place it relative to the parent */
+    bottom: 1rem; /* Position it at the bottom of the screen */
+    text-align: center; /* Center align the image within its box */
+}
+
+.image-box img {
+    max-width: 120px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .logo-box h1 {
