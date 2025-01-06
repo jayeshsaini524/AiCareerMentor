@@ -33,6 +33,7 @@
                     <button type="submit" class="login-btn">LOGIN</button>
                 </form>
             </div>
+        
         </div>
         
         <!-- Home Screen -->
@@ -44,6 +45,7 @@
                     <div class="user-avatar">👤</div>
                 </div>
             </div>
+           
             <div class="menu-grid">
                 <div class="menu-item">
                     <i>🔍</i>
@@ -75,14 +77,19 @@
                     <div class="user-avatar">👤</div>
                 </div>
             </div>
-            
             <div class="search-bar">
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Choose Field of Interest">
-                    <button class="ask-ai-btn">Ask AI</button>
+                    <button class="ask-ai-btn" onclick="showbot()" id="botToggle">Ask AI</button>
                 </div>
+             
             </div>
-
+            <section class="botbox">
+                <iframe id="ibot" style="opacity: 0;"
+                src="https://www.chatbase.co/chatbot-iframe/JyN5qHcQcXYc98Ml2mhK5"
+                frameborder="0"
+            ></iframe>
+            </section>
             <div class="fields-grid">
                 <div class="field-item">Technology</div>
                 <div class="field-item">Healthcare</div>
@@ -108,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="resources-grid">
+            <div class="resources-grid menu-grid" >
                 <div class="resource-card">
                     <h3>Career Guides</h3>
                     <p>Comprehensive guides for different career paths</p>
@@ -148,7 +155,7 @@
             </div>
 
             <div class="comparison-container">
-                <div class="job-comparison">
+                <div class="job-comparison menu-grid">
                     <div class="job-card">
                         <h3>Software Engineer</h3>
                         <p>Avg. Salary: $95,000</p>
@@ -184,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="companies-list">
+            <div class="companies-list menu-grid">
                 <div class="company-card">
                     <div class="company-logo">🏢</div>
                     <div class="company-info">
@@ -208,6 +215,7 @@
                 </div>
             </div>
         </div>
+ 
     </div>
 
    <script src="script.js"></script>

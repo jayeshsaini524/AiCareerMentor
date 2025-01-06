@@ -39,7 +39,7 @@ body, html {
     justify-content: center;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     background: white;
-    padding: 20px;
+    padding: 20rem;
 }
 
 .hidden {
@@ -609,3 +609,41 @@ body, html {
         .search-input:focus {
             outline: none;
         }
+
+        .botbox {
+            display: block;
+            position: absolute;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            max-height:1;
+            width: 1px;
+            transform: translateY(-35px);
+            transition: all .5s ease-in-out;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 3px;
+          }        
+.botbox iframe {
+            width: 100%;
+            height: 112%;
+            -webkit-filter: grayscale(1) invert(1);
+                    filter: grayscale(1) invert(1);
+            
+}
+
+@keyframes collapsed{
+    from{
+      max-height: 350px;
+    }
+   to{
+      max-height: 5px;
+      width: 40px;
+      height: 40px;      
+    }
+  }
+  .botbox.collapsed {
+    animation: collapsed .7s linear;
+  }
+  .botbox.expand {
+    animation: collapsed .7s reverse;
+    }
