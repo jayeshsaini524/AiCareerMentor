@@ -201,7 +201,7 @@ body, html {
 
 @keyframes collapsed{
 from{
-  max-height: 450px;
+  max-height: 350px;
 }
 to{
   max-height: 5px;
